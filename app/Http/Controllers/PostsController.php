@@ -14,7 +14,7 @@ class PostsController extends Controller
      */
     public function index(Request $request)
     {
-        $posts = Posts::latest()->paginate(5);
+        $posts = Posts::all()->paginate(5);
 
         return view('posts.index',compact('posts'));
     }
